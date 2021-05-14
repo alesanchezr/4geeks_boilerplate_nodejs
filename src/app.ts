@@ -19,6 +19,7 @@ createConnection({
 	entities: process.env.NODE_ENV === 'development' ? ["./src/entities/*.ts"] : ["./dist/entities/*.js"],
 	logging: false,
     migrations: ["migration/*.js"],
+    synchronize:true,
     cli: {
         "migrationsDir": "migration"
     }
